@@ -42,9 +42,9 @@ El formulario se deberá renderizar al ingresar a cualquier ruta si el usuario n
 
 ● Password.
 
-● Botón de “Enviar”.
+● Botón de **Enviar**.
 
-Al hacer click en “Enviar”, se deberá validar que ambos campos no estén vacíos, y mostrar un mensaje al usuario si lo estuviesen. Caso contrario, se deberá realizar una petición POST a la siguiente url, con los campos email y password en el BODY.
+Al hacer click en **Enviar**, se deberá validar que ambos campos no estén vacíos, y mostrar un mensaje al usuario si lo estuviesen. Caso contrario, se deberá realizar una petición POST a la siguiente url, con los campos email y password en el BODY.
 
 Los datos válidos para obtener un token son:
 
