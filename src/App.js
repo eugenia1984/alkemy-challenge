@@ -4,7 +4,7 @@ import Listado from "./components/listado/Listado.js";
 
 function App() {
   return (
-    <div classNAme="App">
+    <div className="App">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/listado" element={<Listado />} />

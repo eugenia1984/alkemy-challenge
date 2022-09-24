@@ -32,10 +32,10 @@ function LoginForm () {
     axios
       .post("http://challenge-react.alkemy.org", {email, password})
       .then(res => {
-        swAlert.fire("Perfecto, ingresaste correctamente");
-        console.log(res.data);
+        swAlert.fire("Felicitaciones", "Ingresaste correctamente","success");
         const tokenRecibido = res.data.token;
         localStorage.setItem("token", tokenRecibido);
+        navigate("/listado");
       })
   }
 
