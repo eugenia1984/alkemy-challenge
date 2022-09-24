@@ -5,12 +5,13 @@ function Listado() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("item");
+    const token = localStorage.getItem("token");
 
     if(token === null) {
+      console.log("Entre en el if")
       navigate("/")
     }
-  }, [navigate])
+  }, [])
 
   return (
     <h2>Listado</h2>

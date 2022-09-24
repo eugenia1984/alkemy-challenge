@@ -98,6 +98,10 @@ Al hacer click en un héroe del equipo, se mostrarán los detalles que figuran e
 
 ● Lugar de trabajo.
 
+
+---
+
+
 ### Tests
 
 De forma opcional, se podrán agregar tests unitarios para validar los elementos de la app:
@@ -110,9 +114,12 @@ De forma opcional, se podrán agregar tests unitarios para validar los elementos
 
 Para la implementación de los tests deberán utilizarse las librerías Jest y React 
 
-## Testing Library.
+Testing Library.
 
-Criterios a evaluar
+
+---
+
+#### Criterios a evaluar
 
 ● Diseño responsive, moderno e intuitivo.
 
