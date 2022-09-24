@@ -1,0 +1,26 @@
+.listado-title {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.btn-container {
+  width: 120px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-listado {
+  width: 120px;
+  padding: 12px 24px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border: 1px solid rgb(99, 98, 98);
+  background-color: var(--yellow);
+}
+
+.btn-listado:hover {
+  background-color: var(--pink);
+}

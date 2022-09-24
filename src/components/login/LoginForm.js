@@ -1,10 +1,13 @@
 import axios from "axios";
 import swAlert from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 import "./Login.css";
 
 function LoginForm () {
-  
+  const [loading, setLoading ] = useState(false);
+
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
@@ -29,7 +32,9 @@ function LoginForm () {
         return;
     }
 
+    setLoading(true);
     console.log("Ok estamos listos para enviar la información");
+
     axios
       .post("http://challenge-react.alkemy.org", {email, password})
       .then(res => {
@@ -39,7 +44,11 @@ function LoginForm () {
         navigate("/listado");
         swAlert.fire(`<h2>Login correcto</h2>`)
       })
+      .catch(error => console.log(error.message))
+      .finally(setLoading(false))
   }
+
+  if(loading) return <h1>Cargando</h1>
 
   return (
     <form onSubmit={submitHandler} className="form">
