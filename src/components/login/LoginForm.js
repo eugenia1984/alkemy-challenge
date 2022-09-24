@@ -1,6 +1,7 @@
 import axios from "axios";
 import swAlert from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 function LoginForm () {
   
@@ -36,32 +37,31 @@ function LoginForm () {
         const tokenRecibido = res.data.token;
         localStorage.setItem("token", tokenRecibido);
         navigate("/listado");
+        swAlert.fire(`<h2>Login correcto</h2>`)
       })
   }
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className="form">
       <label>
         <span>E-mail:</span>
         <input 
           type="text" 
           name="email"
+          placeholder="E-mail"
         />
       </label>  
-      <br />
       <label>
         <span>Password:</span>
         <input
           type="password"
           name="password" 
+          placeholder="Password"
         />
       </label>
-      <br />
-      <button
-        type="submit"
-      >
-        Ingresar
-      </button>
+      <div className="btn-container">
+        <button type="submit" className="btn-login">Ingresar</button>
+      </div>
     </form> 
   );
 }

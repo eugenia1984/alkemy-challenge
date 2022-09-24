@@ -1,0 +1,77 @@
+:root {
+  --green: #7dded8;
+  --pink: #ff8cd9;
+  --yellow: #ffdc62;
+  --black: #041538;
+}
+.form {
+  max-width: 900px;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1.5rem 1rem;
+  background-color: var(--green);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+label span,
+label input {
+  display: block;
+  margin-bottom: 12px;
+}
+
+label input {
+  padding: 0.25rem;
+}
+
+.btn-container {
+  width: 120px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-login {
+  width: 120px;
+  padding: 12px 24px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border: 1px solid rgb(99, 98, 98);
+  background-color: var(--yellow);
+}
+
+.btn-login:hover {
+  background-color: var(--pink);
+}
+
+@media screen and (max-width: 765px) {
+  label span {
+    text-align: center;
+  }
+  label input {
+    width: 90%;
+    margin: 12px auto;
+  }
+}
+
+@media screen and (min-width: 766px) {
+  label span {
+    text-align: center;
+  }
+  label input {
+    width: 600px;
+    margin: 12px auto;
+    padding: 12px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+}
