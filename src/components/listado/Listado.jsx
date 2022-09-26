@@ -1,19 +1,20 @@
 import React from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Listado.css";
 
 function Listado() {
   const navigate = useNavigate();
-  
+  const [isAuth, setAuth] = useState(false);
+
   useEffect(() => {
     const token = localStorage.getItem("token");
-    console.log(token)
+    setAuth(!token);
+  }, [navigate]);
 
-    if (token===null) {
-      navigate("/");
-    } // eslint-disable-next-line 
-  }, []);
+  useEffect(() => {
+    if (!isAuth) navigate("/");
+  }, [isAuth, navigate]);
   
   const handlerClick = () => {
     localStorage.clear();

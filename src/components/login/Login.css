@@ -4,6 +4,7 @@
   --yellow: #ffdc62;
   --black: #041538;
 }
+
 .form {
   max-width: 900px;
   width: 90%;
@@ -73,5 +74,5 @@ label input {
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
-}
+  }
 }
