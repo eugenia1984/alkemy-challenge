@@ -2,6 +2,7 @@ import axios from "axios";
 import swAlert from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 import "./Login.css";
 
@@ -14,6 +15,7 @@ function LoginForm () {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+
     const regExEmail =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
     if(email === "" || password === "") {
@@ -26,10 +28,9 @@ function LoginForm () {
       return;
     }
 
-    if(email !== "challenge@alkemy.org" ||
-      password !== "react")  {
-        swAlert.fire(`<h2>Credenciales inválidas</h2>`);
-        return;
+    if(email !== "challenge@alkemy.org" || password !== "react")  {
+      swAlert.fire(`<h2>Credenciales inválidas</h2>`);
+      return;
     }
 
     setLoading(true);
@@ -40,12 +41,15 @@ function LoginForm () {
       .then(res => {
         swAlert.fire("Felicitaciones", "Ingresaste correctamente","success");
         const tokenRecibido = res.data.token;
+
         localStorage.setItem("token", tokenRecibido);
         navigate("/listado");
         swAlert.fire(`<h2>Login correcto</h2>`)
       })
-      .catch(error => console.log(error.message))
-      .finally(setLoading(false))
+      .catch((error) => {
+        swAlert.fire("Hubo un error")
+      })
+      .finally(setLoading(false));
   }
 
   if(loading) return <h1>Cargando</h1>
@@ -66,10 +70,11 @@ function LoginForm () {
           type="password"
           name="password" 
           placeholder="Password"
+          autoComplete="off"
         />
       </label>
       <div className="btn-container">
-        <button type="submit" className="btn-login">Ingresar</button>
+        <Button type="submit" variant="success" size="lg">Ingresar</Button>
       </div>
     </form> 
   );

@@ -1,18 +1,9 @@
-import { Link } from "react-router-dom";
-import Login from "../login/Login.jsx";
-import Listado from "../listado/Listado.jsx";
+import NavbarHeader from "./NavbarHeader.jsx";
 
 function Header () {
-
-  return(
+  return (
     <header>
-      <nav>
-        <ul>
-          <Link path="/" element={<Login />} />
-          <Link path="/listado" element={<Listado />}/>
-          <li>Contacto</li>
-        </ul>
-      </nav>
+      <NavbarHeader />
     </header>
   )
 }

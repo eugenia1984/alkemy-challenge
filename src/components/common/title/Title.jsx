@@ -1,6 +1,6 @@
-import "./title.css";
+import "./Title.css";
 
-function Title(title) {
+function Title({title}) {
   return (
     <h1 className="title">{title}</h1>
   )

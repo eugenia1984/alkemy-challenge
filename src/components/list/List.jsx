@@ -1,9 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Listado.css";
+import CardList from "./CardList.jsx";
+import "./List.css";
 
-function Listado() {
+function List () {
   const navigate = useNavigate();
   const [isAuth, setAuth] = useState(false);
 
@@ -24,6 +25,11 @@ function Listado() {
   return (
     <>
       <h2 className="listado-title">Listado</h2>
+      <div className="row">
+        <div className="col col-sm-6 col-md-4 col-lg-3">
+          <CardList />
+        </div>
+      </div>
       <div className="btn-container">
         <button onClick={handlerClick} className="btn-listado">Cerrar</button>
       </div>
@@ -31,4 +37,4 @@ function Listado() {
   );
 }
 
-export default Listado;
+export default List;
