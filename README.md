@@ -1,8 +1,8 @@
 # :star2: ALKEMY : CHALLENGE FRONTEND - React 🚀
 
-## Objetivo
+## :star: Objetivo
 
-Desarrollar una aplicación para crear un equipo de superhéroes que consumirá una API externa y mostrará diferentes atributos a nivel individual de cada miembro y del equipo consolidado.
+Desarrollar una aplicación para mostrar peliculas que consumirá una API externa y mostrará diferentes el detalle de las peliculas.
 
 👉 Consumir los endpoints de la siguiente API para realizar las distintas operaciones. Deberás autenticarte con Facebook para realizar peticiones a la misma.
 
@@ -16,21 +16,14 @@ Desarrollar una aplicación para crear un equipo de superhéroes que consumirá 
 
 Mientras más completes, mayor puntaje obtendrás, pero puedes enviar la app hasta el estadío que tengas en base a tu conocimiento actual. Recuerda que el objetivo del challenge es entender tu nivel de conocimiento actual.
 
-## Requerimientos funcionales
+## :star: Requerimientos funcionales
 
-En la pantalla de **Home** se deberá mostrar, además de los miembros del equipo:
+En la pantalla de **Home** se deberá mostrar:
 
-● Acumulativo de powerstats, agrupados por cada uno, es decir: suma total de intelligence, strength, etc. de todos los miembros individuales del equipo.
+● Header con su barra de navegacion
 
-● El powerstat que más acumulativo tenga debería aparecer arriba para categorizar el tipo de equipo (inteligencia, fuerza, etc.).
 
-● Pesos y altura promedio del equipo.
-
-● El equipo debe tener 6 miembros. Debe haber 3 miembros con orientación buena y 3 con orientación mala. Esto debe validarse al intentar agregar un nuevo héroe.
-
-● Se deberá poder eliminar un miembro del equipo, lo que generará un nuevo promedio de peso, acumulativo de powerstats, etc.
-
-## Requerimientos técnicos
+##  :star: Requerimientos técnicos
 
 Aprovechando las características de React, deberán crearse las siguientes secciones, y modularizar las mismas en componentes reutilizables.
 
@@ -48,61 +41,52 @@ Al hacer click en **Enviar**, se deberá validar que ambos campos no estén vac�
 
 Los datos válidos para obtener un token son:
 
+```
 ● Email: challenge@alkemy.org
-
 ● Password: react
+```
 
 En el caso de obtener un error de la API, se deberá mostrar una alerta, mientras que si es satisfactorio deberá redirigir al Home y almacenar el token obtenido en localStorage.
 
-Las validaciones del formulario deberán realizarse utilizando la librería Formik.
+Las validaciones del formulario deberán realizarse utilizando la **librería Formik**.
 
-2. Equipo
+2. Peliculas
 
-El Home de la aplicación mostrará a los miembros del equipo en un listado en un grid. Cada ítem del listado contendrá:
+El Home de la aplicación mostrará las peliculas en un listado en un grid. Cada ítem del listado contendrá:
 
-● Nombre del héroe.
-
-● Imagen.
-
-● Powerstats.
-
-● Acciones para ver el detalle o eliminarlo del equipo.
-
-3. Buscador de Héroes
-
-Para agregar un héroe a su equipo, se deberá visualizar un formulario que realice una petición GET al endpoint de búsqueda y muestre los resultados disponibles en un grid. Esos resultados deberán mostrar:
-
-● Nombre del héroe.
+● Nombre de la película.
 
 ● Imagen.
 
-● Acciones para agregarlo al equipo
+● Detalle de la película.
 
-Las validaciones del formulario deberán realizarse utilizando la librería Formik.
+● Botón: Acciones para ver el detalle o eliminarlo del equipo.
 
-4. Detalle de Héroe
+3. Buscador de Películas
 
-Al hacer click en un héroe del equipo, se mostrarán los detalles que figuran en el endpoint. De ellos, mostrar:, altura, nombre completo, alias, color de ojos y cabello, y su lugar de trabajo.
+Para agregar una pelícila, se deberá visualizar un formulario que realice una petición GET al endpoint de búsqueda y muestre los resultados disponibles en un grid. Esos resultados deberán mostrar:
 
-● Peso.
+● Nombre de la película.
 
-● Altura.
+● Imagen.
 
-● Nombre.
+● Acciones para agregarlo la película
 
-● Alias.
+Las validaciones del formulario deberán realizarse utilizando la **librería Formik**.
 
-● Color de ojos.
+4. Detalle de la Película
 
-● Color de cabello.
+Al hacer click en una película, se mostrarán los detalles que figuran en el endpoint. De ellos, mostrar:
 
-● Lugar de trabajo.
+● Título
+
+● Imagen
 
 
 ---
 
 
-### Tests
+### :star: Tests
 
 De forma opcional, se podrán agregar tests unitarios para validar los elementos de la app:
 
@@ -119,7 +103,7 @@ Testing Library.
 
 ---
 
-#### Criterios a evaluar
+#### :star: Criterios a evaluar
 
 ● Diseño responsive, moderno e intuitivo.
 
@@ -136,6 +120,7 @@ Testing Library.
 ● Código modularizado en componentes reutilizables e independientes.
 
 
+---
 ---
 
 # Getting Started with Create React App
